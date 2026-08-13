@@ -26,14 +26,14 @@ pipeline {
             }
         } */
 
-        stage('Deploy') {
-            steps {
+       stage('Deploy') {
+           steps {
                 sh '''
-                    sudo rm -rf /var/www/html/*
-                    sudo cp -r src/dist/* /var/www/html/
-                '''
-            }
-        }
+                   sudo rm -rf /var/www/html/*
+                   sudo cp -r src/dist/* /var/www/html/
+                  '''
+              }
+          }
 
         stage('OWASP ZAP Scan') {
             steps {
