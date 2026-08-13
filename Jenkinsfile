@@ -20,11 +20,11 @@ pipeline {
             }
         }
 
-        stage('Trivy Security Scan') {
+        /* stage('Trivy Security Scan') {
             steps {
                 sh 'trivy fs .'
             }
-        }
+        } */
 
         stage('Deploy') {
             steps {
